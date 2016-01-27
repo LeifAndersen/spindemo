@@ -45,9 +45,9 @@ active proctype Controller() {
   /* Main Loop */
   do :: skip ->
         toYellow(ch[0], ack[0], 0);
-        switchlights(ch[0], ack[0], 0, ch[1], ack[1], 1);
-        toYellow(ch[1], ack[1], 1);
         switchlights(ch[1], ack[1], 1, ch[0], ack[0], 0);
+        toYellow(ch[1], ack[1], 1);
+        switchlights(ch[0], ack[0], 0, ch[1], ack[1], 1);
   od;
 }
 
